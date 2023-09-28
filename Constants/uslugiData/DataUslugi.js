@@ -22,7 +22,7 @@ export const dataUslugi = [
 	{
 		id: 3,
 		title: 'Грузовое такси с(без) грузчиками',
-		img: '/uslugi/uslugiCard/avto.webp',
+		img: '/uslugi/gruzovoe-taksi-s-gruzchikami/main.webp',
 		alt: 'Услуги грузового такси',
 		link: `${process.env.NEXT_PUBLIC_BASE_URL}/uslugi/gruzovoe-taksi-s-gruzchikami`,
 		info: 'Грузовое такси',

@@ -73,7 +73,7 @@ const Footer = () => {
 							<a href={`${'https://t.me/@O'}`} target='_blank' >
 								<Image src='/social-icon/telegram.svg' width={25}  height={25} alt='иконка телеграма' />
 							</a>
-							<a href='viber://chat?number=%2B375' target='_blank' >
+							<a href='viber://chat?number=%2B375447009000/' target='_blank' >
 								<Image src='/social-icon/viber.svg' width={25} height={25}  alt='иконка вайбера' />
 							</a>
 						</div>
