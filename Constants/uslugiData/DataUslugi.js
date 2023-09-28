@@ -12,7 +12,7 @@ export const dataUslugi = [
 	{
 		id: 2,
 		title: 'Грузоперевозки по Беларуси',
-		img: '/uslugi/uslugiCard/Belarus.webp',
+		img: '/uslugi/uslugiCard/belarus.webp',
 		alt: 'Услуги грузового такси',
 		link: `${process.env.NEXT_PUBLIC_BASE_URL}/uslugi/gruzoperevozki-po-belarusi`,
 		info: 'Грузоперевозки по Беларуси до 5 тонн и 40 м3',
