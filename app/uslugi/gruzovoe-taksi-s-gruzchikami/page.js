@@ -1,4 +1,5 @@
 import { dataPrices } from "@/Constants/priceDataPages/DataPricePages"
+import BtnOrder from "@/components/btn/btnOrder/BtnOrder"
 import DescriptionsComp from "@/components/descriptionsComp/DescriptionsComp"
 import Image from "next/image"
 
@@ -38,7 +39,11 @@ const page = () => {
 						</h2>
 						<DescriptionsComp data={dataPrices.taxi} />
 
-						<p className="mt-5 font-light text-justify pl-2">
+						<div className="mt-6 flex justify-end">
+							<BtnOrder title={`Заказать Грузовое такси`} />
+						</div>
+
+						<p className="mt-8 font-light text-justify pl-2">
 							Наше грузовое такси в Минске предлагает выгодные тарифы, которые помогут сэкономить ваши средства при перевозке грузов. Наши опытные водители гарантируют безопасность и надежность доставки, а также обеспечивают быструю подачу машины, чтобы удовлетворить ваши потребности в перевозке грузов в самые кратчайшие сроки
 						</p>
 						<div className="my-7 text-center">

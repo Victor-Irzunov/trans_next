@@ -21,11 +21,51 @@ export const dataUslugi = [
 	},
 	{
 		id: 3,
-		title: 'Грузовое такси с(без) грузчиками',
+		title: 'Грузовое такси',
 		img: '/uslugi/gruzovoe-taksi-s-gruzchikami/main.webp',
 		alt: 'Услуги грузового такси',
 		link: `${process.env.NEXT_PUBLIC_BASE_URL}/uslugi/gruzovoe-taksi-s-gruzchikami`,
 		info: 'Грузовое такси',
+		price: 'от 25-55 руб/час',
+		info2: '(Минимальный заказ 2 часа)'
+	},
+	{
+		id: 4,
+		title: 'Вывоз строительного мусора',
+		img: '/uslugi/vyvoz-stroitelnogo-musora/musor.webp',
+		alt: 'Услуга вывоз мусора',
+		link: `${process.env.NEXT_PUBLIC_BASE_URL}/uslugi/vyvoz-stroitelnogo-musora`,
+		info: 'Вывоз строительного мусора самосвал, фура',
+		price: 'от 99 руб',
+		info2: '(Минимальный заказ 2 часа)'
+	},
+	{
+		id: 5,
+		title: 'Перевозка вещей',
+		img: '/uslugi/perevozka-veshej/kvartira.webp',
+		alt: 'Услуга перевозка вещей',
+		link: `${process.env.NEXT_PUBLIC_BASE_URL}/uslugi/perevozka-veshej`,
+		info: 'Упаковка и перевозка вещей',
+		price: 'от 25-55 руб/час',
+		info2: '(Минимальный заказ 2 часа)'
+	},
+	{
+		id: 5,
+		title: 'Перевозка мебели',
+		img: '/uslugi/uslugiCard/mebel.webp',
+		alt: 'Услуга перевозка мебели',
+		link: `${process.env.NEXT_PUBLIC_BASE_URL}/uslugi/perevozka-mebeli`,
+		info: 'Перевозка диванов, кроватей и другой мебели',
+		price: 'от 25-55 руб/час',
+		info2: '(Минимальный заказ 2 часа)'
+	},
+	{
+		id: 6,
+		title: 'Квартирные переезды',
+		img: '/uslugi/kvartirnye-pereezdy/kvartirnye.webp',
+		alt: 'Квартирные переезды',
+		link: `${process.env.NEXT_PUBLIC_BASE_URL}/uslugi/kvartirnye-pereezdy`,
+		info: 'Все виды квартирных переездов по Минску',
 		price: 'от 25-55 руб/час',
 		info2: '(Минимальный заказ 2 часа)'
 	},

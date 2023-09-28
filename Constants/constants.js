@@ -1,7 +1,9 @@
-import { Grid } from 'antd'
+"use client"
+import { Grid } from 'antd';
 
+const { useBreakpoint } = Grid;
 
-const { useBreakpoint } = Grid
 export const useScreens = () => {
-	return useBreakpoint()
-}
+  const screens = useBreakpoint();
+  return screens;
+};

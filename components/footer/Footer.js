@@ -82,8 +82,8 @@ const Footer = () => {
 				<div
 					className='mt-6 border-t pt-2'
 				>
-					<p className='text-black xs:text-xs xz:text-[10px]' >Copyright © 2018-2023 | Разработка и Продвижение
-						<a href='https://vi-tech.by' target='_blank' rel="noreferrer" className='text-sky-100 no-underline'> VI:TECH</a>
+					<p className='text-white/40 xs:text-xs xz:text-[10px]' >Copyright © 2018-2023 | Разработка и Продвижение
+						<a href='https://vi-tech.by' target='_blank' rel="noreferrer" className='text-sky-600 no-underline'> VI:TECH</a>
 					</p>
 				</div>
 			</div>

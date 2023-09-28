@@ -10,9 +10,12 @@ const DescriptionsComp = ({ data }) => {
         column={3}
         layout='vertical'
       >
-        <Descriptions.Item label="Вес и объём">
-          {`до ${data.mass} тонн и ${data.mass2}м`}<sup><small>3</small></sup>
-        </Descriptions.Item>
+        {
+          data.mass &&
+          <Descriptions.Item label="Вес и объём">
+            {`до ${data.mass} тонн и ${data.mass2}м`}<sup><small>3</small></sup>
+          </Descriptions.Item>
+        }
         {
           data.price &&
           <Descriptions.Item label="1 час (руб.)">{`${data.price}`}</Descriptions.Item>

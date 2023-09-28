@@ -1,4 +1,5 @@
 import { dataPrices } from "@/Constants/priceDataPages/DataPricePages"
+import BtnOrder from "@/components/btn/btnOrder/BtnOrder"
 import DescriptionsComp from "@/components/descriptionsComp/DescriptionsComp"
 import Image from "next/image"
 
@@ -37,6 +38,10 @@ const page = () => {
 							Тариф на Грузоперевозки по РБ
 						</h2>
 						<DescriptionsComp data={dataPrices.belarus} />
+
+						<div className="mt-6 flex justify-end">
+							<BtnOrder title={`Заказать Грузоперевозки по Беларуси`} />
+						</div>
 
 						<p className="mt-5 font-light text-justify pl-2">
 							Мы предлагаем выгодные тарифы на грузоперевозки по Беларуси, чтобы сделать вашу логистику более экономичной. Наши опытные водители гарантируют безопасность и своевременную доставку вашего груза. Доверьтесь нам, и мы сделаем перевозку вашего груза максимально выгодной и эффективной.

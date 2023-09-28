@@ -33,11 +33,11 @@ export const DrawerMenuMobilComp = ({ isOpen, setIsOpen, onClose }) => {
 								<p className='font-semibold text-base mb-1 uppercase'>
 									{el.title}
 								</p>
-								<ul className='h-full text-sm mt-3 cursor-pointer flex flex-col justify-between items-start'>
+								<ul className='h-full mt-5 cursor-pointer flex flex-col justify-between items-start'>
 									{
 										el.children && el.children.map(elem => {
 											return (
-												<li className='underline mb-3 flex w-full justify-start items-end' key={elem.id}>
+												<li className='mb-4 flex w-full text-sm uppercase justify-start items-center' key={elem.id}>
 													<Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/uslugi/${elem.link}`}
 														className="cursor-pointer hover:text-blue-700"
 														onClick={onClose3}

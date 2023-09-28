@@ -1,6 +1,7 @@
 import { dataUslugi } from "@/Constants/uslugiData/DataUslugi";
 import Image from "next/image";
 import Link from "next/link";
+import BtnOrder from "../btn/btnOrder/BtnOrder";
 
 
 const CardUslugiComp = () => {
@@ -34,7 +35,8 @@ const CardUslugiComp = () => {
 								</p>
 							</div>
 
-							<div className="mt-8 flex justify-end px-3">
+							<div className="mt-8 flex justify-between items-center px-5">
+								<BtnOrder title={`Заказать ${el.title}`} />
 								<Link href={el.link} className="font-light uppercase text-xs flex">
 									перейти на страницу
 									<Image

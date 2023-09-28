@@ -1,3 +1,4 @@
+import { Empty } from "antd"
 
 
 const page = () => {
@@ -6,13 +7,17 @@ const page = () => {
 			<div className="container mx-auto">
 				<section className="">
 
-					<div className="">
-						<h1 className="">
-							Для клиента
+					<div className="mb-10 text-center">
+						<h1 className="uppercase text-3xl">
+							Информация для клиентов
 						</h1>
 					</div>
 
+					<Empty />
 
+					<p className="mt-6 text-center">
+					РАЗДЕЛ НАХОДИТСЯ В РАЗРАБОТКЕ
+					</p>
 				</section>
 			</div>
 		</main>
