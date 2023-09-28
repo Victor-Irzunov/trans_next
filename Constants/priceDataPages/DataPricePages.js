@@ -1,0 +1,48 @@
+export const dataPrices =
+{
+	minsk: {
+		mass: 5,
+		mass2: 40,
+		price: 'от 25,00 - 55,00',
+		km: 0,
+		gruz: '8,00',
+		time: 'от 2-х часов',
+		id: 1,
+	},
+	belarus: {
+		mass: 5,
+		mass2: 40,
+		price: '',
+		km: '0,85',
+		gruz: '8,00',
+		time: 'от 2-х часов',
+		id: 2,
+	},
+	taxi: {
+		mass: 1.5,
+		mass2: 12,
+		price: 19.00,
+		km: 0.65,
+		gruz: 8.00,
+		time: 2,
+		id: 3,
+	},
+	krupnGruz: {
+		mass: 1.5,
+		mass2: 12,
+		price: 20.00,
+		km: 0.65,
+		gruz: 8.00,
+		time: 'от 2-х часов',
+		id: 3,
+	},
+	musor: {
+		mass: 1.5,
+		mass2: 12,
+		price: 21.00,
+		km: 0.65,
+		gruz: 8.00,
+		time: 'от 2-х часов',
+		id: 3,
+	},
+}
