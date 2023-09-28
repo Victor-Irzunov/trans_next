@@ -38,9 +38,7 @@ export const DrawerMenuMobilComp = ({ isOpen, setIsOpen, onClose }) => {
 										el.children && el.children.map(elem => {
 											return (
 												<li className='underline mb-3 flex w-full justify-start items-end' key={elem.id}>
-													<Link href={{
-														pathname: `/uslugi/${elem.link.split(' ').join('-')}`
-													}}
+													<Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/uslugi/${elem.link}`}
 														className="cursor-pointer hover:text-blue-700"
 														onClick={onClose3}
 													>

@@ -6,6 +6,11 @@ export const dataService = [
 		title: 'Грузоперевозки',
 		children: [
 			{
+				id: 0,
+				title2: 'Грузоперевозки по Беларуси',
+				link: 'gruzoperevozki-po-belarusi',
+			},
+			{
 				id: 1,
 				title2: 'Грузовое такси с грузчиками',
 				link: 'gruzovoe-taksi-s-gruzchikami',

@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { dataPrices } from '@/Constants/priceDataPages/DataPricePages'
 
 
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between pt-32 pb-20 overflow-hidden">
@@ -54,9 +55,18 @@ export default function Home() {
             Тариф на грузоперевозки
           </h3>
           <div className='mt-8'>
-          <DescriptionsComp data={dataPrices.minsk}/>
+            <DescriptionsComp data={dataPrices.minsk} />
           </div>
         </section>
+
+        <div className="my-7 text-center">
+          <p className="mb-4 font-semibold">
+            Заказать грузоперевозку по РБ можно по телефону:
+          </p>
+          <a href="tel:80447009000" className="text-3xl font-bold">
+            8 044 700-90-00
+          </a>
+        </div>
 
         <section className='mt-24'>
           <h3 className='text-xl mb-7 font-semibold'>
