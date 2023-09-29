@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Button, Modal } from 'antd';
-import FormOrder from '../formOrder/FormOrder';
+import FormOrder from '../form/formOrder/FormOrder';
 
 
 const ModalComp = ({ isModalOpen, setIsModalOpen, title = 'Заказать' }) => {

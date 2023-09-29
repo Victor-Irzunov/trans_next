@@ -35,6 +35,15 @@ const CarouselSlider = () => {
 						alt='Доствка груза'
 					/>
 				</div>
+				<div>
+					<Image
+						src='/carousel/dostavka2.webp'
+						width={650}
+						height={285}
+						className=''
+						alt='Доствка груза'
+					/>
+				</div>
 			</Carousel>
 		</div>
 	);

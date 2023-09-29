@@ -35,7 +35,7 @@ const page = () => {
 
 					<div className="mt-16">
 						<h2 className="font-bold text-xl mb-6">
-							Тариф на Грузоперевозки по РБ
+							Тариф на Грузовое такси в Минске
 						</h2>
 						<DescriptionsComp data={dataPrices.taxi} />
 
