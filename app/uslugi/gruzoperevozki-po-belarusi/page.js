@@ -4,7 +4,7 @@ import DescriptionsComp from "@/components/descriptionsComp/DescriptionsComp"
 import Image from "next/image"
 
 export const metadata = {
-	title: 'Грузоперевозки по Беларуси | Транспортная компания Trans-gruz.by',
+	title: 'Грузоперевозки по Беларуси | Доставка грузов по РБ',
 	description: 'Надежные грузоперевозки по всей территории Беларуси с опытными водителями и выгодными тарифами. Закажите перевозку грузов по Беларуси сейчас и доверьте нам ваш груз.'
 }
 
@@ -28,20 +28,21 @@ const page = () => {
 						<Image
 							src='/uslugi/gruzoperevozki-po-belarusi/main.webp'
 							alt="Грузоперевозки по Беларуси"
-							className="object-cover w-full h-full mx-auto mt-12"
-							style={{ width: 'auto', height: 'auto' }}
-							width={612} height={480} loading="eager" />
+							className="mx-auto mt-12"
+							style={{ width: '400px', height: '100%' }}
+							width={400} height={400}
+							loading="eager" />
 					</div>
 
 					<div className="mt-16">
 						<h2 className="font-bold text-xl mb-6">
 							Тариф на Грузоперевозки по РБ
 						</h2>
-						<DescriptionsComp data={dataPrices.belarus} />
+						<DescriptionsComp data={dataPrices.belarus} title="Заказать грузоперевозки по РБ" />
 
-						<div className="mt-6 flex justify-end">
+						{/* <div className="mt-6 flex justify-end">
 							<BtnOrder title={`Заказать Грузоперевозки по Беларуси`} />
-						</div>
+						</div> */}
 
 						<p className="mt-5 font-light text-justify pl-2">
 							Мы предлагаем выгодные тарифы на грузоперевозки по Беларуси, чтобы сделать вашу логистику более экономичной. Наши опытные водители гарантируют безопасность и своевременную доставку вашего груза. Доверьтесь нам, и мы сделаем перевозку вашего груза максимально выгодной и эффективной.

@@ -16,7 +16,7 @@ const DescriptionsContactComp = () => {
 		>
 			<Descriptions.Item label="Адрес">
 				Республика Беларусь<br />
-				г. Минск ул. Калинина 105
+				г. Минск ул. Мележа 3
 			</Descriptions.Item>
 			<Descriptions.Item label="Время работы диспетчера">
 				<Space direction="vertical">
@@ -35,9 +35,9 @@ const DescriptionsContactComp = () => {
 			<Descriptions.Item label="Телефон">
 				+375 44 700-90-00
 			</Descriptions.Item>
-			<Descriptions.Item label="Телеграм">
+			{/* <Descriptions.Item label="Телеграм">
 				@
-			</Descriptions.Item>
+			</Descriptions.Item> */}
 		</Descriptions>
 	)
 }

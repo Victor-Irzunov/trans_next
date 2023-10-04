@@ -35,6 +35,11 @@ export const dataService = [
 				title2: 'Квартирные переезды',
 				link: 'kvartirnye-pereezdy',
 			},
+			{
+				id: 6,
+				title2: 'Офисные переезды',
+				link: 'ofisnye-pereezdy',
+			},
 		]
 	},
 	// {

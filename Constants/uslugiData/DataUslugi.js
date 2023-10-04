@@ -69,5 +69,15 @@ export const dataUslugi = [
 		price: 'от 25-55 руб/час',
 		info2: '(Минимальный заказ 2 часа)'
 	},
+	{
+		id: 7,
+		title: 'Офисные переезды',
+		img: '/uslugi/ofisnye-pereezdy/ofisnye.webp',
+		alt: 'Офисные переезды',
+		link: `${process.env.NEXT_PUBLIC_BASE_URL}/uslugi/ofisnye-pereezdy`,
+		info: 'Все виды офисных переездов в Минске и районе',
+		price: 'от 25-55 руб/час',
+		info2: '(Минимальный заказ 2 часа)'
+	},
 
 ]

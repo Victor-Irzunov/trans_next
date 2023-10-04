@@ -1,16 +1,20 @@
 import {
-	// PhoneOutlined,
 	SmileOutlined
 } from '@ant-design/icons'
 import { Button, notification } from 'antd'
-import React from 'react'
 import FormNotification from './formNotication/FormNotivication'
 
+let notificationKey; // Объявляем переменную для хранения ключа уведомления
+
+// Функция для закрытия уведомления
+const closeNotification = () => {
+	notification.destroy(notificationKey);
+}
 
 const openNotification = (placement) => {
-	notification.info({
+	notificationKey = notification.info({
 		message: `Напишите номер телефона`,
-		description: <FormNotification />,
+		description: <FormNotification closeNotification={closeNotification} />, // Передаем функцию для закрытия уведомления
 		placement,
 		icon: (
 			<SmileOutlined
@@ -22,6 +26,7 @@ const openNotification = (placement) => {
 		duration: 0,
 	})
 }
+
 const NotificationComp = ({ text, type, icon }) => (
 	<>
 		<Button
@@ -31,7 +36,7 @@ const NotificationComp = ({ text, type, icon }) => (
 		>
 			{text}
 		</Button>
-
 	</>
 )
+
 export default NotificationComp

@@ -14,7 +14,8 @@ const Header = () => {
           <div className=''>
             <Link href='/'>
               <Image src='/logo/logo.webp' alt='Логотип компании по грузоперевозкам'
-                className='w-full' width={359} height={99}
+                // className='w-full' width={359} height={99}
+                className='' width={180} height={50}
               />
             </Link>
           </div>
@@ -29,7 +30,8 @@ const Header = () => {
           <div className=''>
           <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/`}>
               <Image src='/logo/logo.webp' alt='Логотип компании по грузоперевозкам'
-                className='w-full' width={359} height={99}
+                // className='w-full' width={359} height={99}
+                className='' width={180} height={50}
               />
             </Link>
           </div>

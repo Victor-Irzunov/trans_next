@@ -4,7 +4,7 @@ import DescriptionsComp from "@/components/descriptionsComp/DescriptionsComp"
 import Image from "next/image"
 
 export const metadata = {
-	title: 'Вывоз строительного мусора в Минске | Компания Trans-gruz.by',
+	title: 'Вывоз строительного мусора в Минске и Минском районе',
 	description: 'Надежный и экологичный вывоз строительного мусора в Минске и области. Мы предлагаем профессиональные услуги по вывозу и утилизации строительных отходов. Закажите вывоз строительного мусора сейчас и обеспечьте чистоту на вашем объекте!',
 };
 
@@ -29,20 +29,16 @@ const page = () => {
 						<Image
 							src='/uslugi/vyvoz-stroitelnogo-musora/musor.webp'
 							alt="Грузоперевозки по Беларуси"
-							className="object-cover w-full h-full mx-auto mt-12"
-							style={{ width: 'auto', height: 'auto' }}
-							width={612} height={480} loading="eager" />
+							className="mx-auto mt-12"
+							style={{ width: '300px', height: '100%' }}
+							width={300} height={300} loading="eager" />
 					</div>
 
 					<div className="mt-16">
 						<h2 className="font-bold text-xl mb-6">
 							Тариф на Вывоз строительного мусора в Минске
 						</h2>
-						<DescriptionsComp data={dataPrices.musor} />
-
-						<div className="mt-6 flex justify-end">
-							<BtnOrder title={`Заказать Вывоз мусора`} />
-						</div>
+						<DescriptionsComp data={dataPrices.musor} title="Заказать вывоз мусора" />
 
 						<p className="mt-8 font-light text-justify pl-2">
 							Наша компания, специализирующаяся на вывозе строительного мусора в Минске, предлагает выгодные тарифы, которые помогут вам значительно сэкономить при утилизации отходов. Наши опытные водители обеспечивают безопасность и надежность доставки, а также гарантируют быструю подачу машины. Мы понимаем, как важно оперативно избавиться от строительных отходов, поэтому наша команда всегда готова удовлетворить ваши потребности в вывозе мусора в самые кратчайшие сроки.

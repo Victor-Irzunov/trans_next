@@ -30,16 +30,20 @@ const page = () => {
 						<Image
 							src='/uslugi/perevozka-veshej/kvartira.webp'
 							alt="Грузоперевозки по Беларуси"
-							className="object-cover w-full h-full mx-auto mt-12"
-							style={{ width: 'auto', height: 'auto' }}
-							width={612} height={480} loading="eager" />
+							// className="object-cover w-full h-full mx-auto mt-12"
+							// style={{ width: 'auto', height: 'auto' }}
+							// width={612} height={480}
+							className="mx-auto mt-12"
+							style={{ width: '300px', height: '100%' }}
+							width={300} height={300}
+							loading="eager" />
 					</div>
 
 					<div className="mt-16">
 						<h2 className="font-bold text-xl mb-6">
 							Тариф на перевозку вещей в Минске
 						</h2>
-						<DescriptionsComp data={dataPrices.veshej} />
+						<DescriptionsComp data={dataPrices.veshej} title='Заказать перевозку вещей в Минске' />
 
 						<div className="mt-6 flex justify-end">
 							<BtnOrder title={`Заказать перевозку вещей`} />

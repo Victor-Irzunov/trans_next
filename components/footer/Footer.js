@@ -14,12 +14,12 @@ const Footer = () => {
 						</p>
 						<ul className='no-underline list-none pl-0'>
 							<li className='no-underline list-none'>
-								<Link href='/kontakty'>
+							<Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/kontakty`}>
 									Контакты
 								</Link>
 							</li>
 							<li className='no-underline list-none'>
-								<Link href='/o-kompanii'>
+								<Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/o-kompanii`}>
 									О компании
 								</Link>
 							</li>
@@ -36,10 +36,6 @@ const Footer = () => {
 								+375 44 700-90-00
 							</a>
 						</p>
-						<p>
-							<MailOutlined className='mr-3 text-lg' />
-							...@gmail.com
-						</p>
 					</div>
 
 					<address className='font-light text-base xs:mb-4 xx:mb-4 xy:mb-4 xz:mb-4 xm:mb-0'>
@@ -47,7 +43,7 @@ const Footer = () => {
 							Юр. адрес
 						</p>
 						<p>
-							220015, г. Минск, ул. Одоевского, 000
+							220015, г. Минск, ул. Мележа, 3
 						</p>
 					</address>
 					<div className='font-light text-base xs:mb-4 xx:mb-4 xy:mb-4 xz:mb-4 xm:mb-0'>
@@ -55,10 +51,10 @@ const Footer = () => {
 							График работы
 						</p>
 						<p>
-							Пн-Пт - 08:00 - 18:00
+							круглосуточно
 						</p>
 						<p>
-							Сб-Вс - выходной
+							приём заказов - 7:00-23:00
 						</p>
 					</div>
 
@@ -67,7 +63,7 @@ const Footer = () => {
 							Мы в соц. сетях
 						</p>
 						<div className='flex justify-evenly items-center pt-3'>
-							<a href='https://www.instagram.com/eo' target='_blank' >
+							<a href='https://www.instagram.com/gruzo.perevozkiminsk/' target='_blank' >
 								<Image src='/social-icon/instagram.svg' width={25} height={25} alt='иконка инстаграма' />
 							</a>
 							<a href={`${'https://t.me/@O'}`} target='_blank' >

@@ -12,20 +12,34 @@ import { dataPrices } from '@/Constants/priceDataPages/DataPricePages'
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between pt-32 pb-20 overflow-hidden">
-      <div className='container mx-auto'>
+      <div className='w-full min-h-screen bg-cover fon2 bg-center' />
 
-
-        <section className='mb-10 sd:text-center xz:text-left'>
-          <h1 className='xz:text-4xl sd:text-6xl uppercase tracking-wider'>Грузоперевозки в Минске</h1>
-          <p className='uppercase text-xl mt-4 font-semibold'>
+      <section className='relative text-white xz:pt-10 xs:pt-24 h-[85vh] text-center'>
+        <div className='container mx-auto'>
+          <h1 className='xz:text-4xl sd:text-7xl uppercase font-bold tracking-wider'>Грузоперевозки в Минске</h1>
+          <p className='uppercase text-2xl mt-8 font-bold'>
             Опытные Грузчики
           </p>
-          <p className='mt-8'>
+          <p className='mt-12 uppercase'>
             Работаем по всей Беларуси
           </p>
-        </section>
 
-        <section>
+          <div className='mt-20'>
+            <a href='tel:80447009000' className='xz:text-3xl xy:text-4xl sd:text-5xl mr-2 font-bold'>
+              +375 44 700-90-00
+            </a>
+          </div>
+
+          <div className='absolute bottom-20 left-0 right-0'>
+            <p className='uppercase text-xl tracking-[2px] font-semibold'>
+              круглосуточно
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className='relative  w-full bg-white py-14'>
+        <div className='container mx-auto'>
           <div className='sd:flex xz:flex-row sd:justify-between sd:items-center'>
             <div className='sd:w-1/2 xz:w-full'>
               <CarouselSlider />
@@ -34,55 +48,68 @@ export default function Home() {
               <ProgressBar />
             </div>
           </div>
-
           <p className='xz:mt-7 sd:mt-10 text-justify'>
             Наша компания предоставляет надежные и профессиональные услуги по грузоперевозкам в Минске и по всей территории Беларуси. Мы заботимся о том, чтобы ваш груз достигал пункта назначения вовремя и в надежности. Независимо от объема или характера груза, мы готовы предложить наши профессиональные услуги по перевозке грузов. Наша команда квалифицированных грузчиков обеспечивает безопасную и эффективную погрузку и разгрузку. Если вам требуется надежный и опытный партнер для грузоперевозок, обращайтесь к нам, и мы с удовольствием поможем вам доставить груз в любую точку Беларуси.
           </p>
-        </section>
+        </div>
+      </section>
 
-        <section className='xz:flex-row sd:flex sd:justify-between mt-20'>
-          <div className='text-center xz:mb-8 sd:mb-0'>
-            <h2 className='mb-5 text-lg uppercase'>Заказ грузоперевозок онлайн</h2>
-            <FormOrder />
+      <section className='relative bg-white py-14 w-full'>
+        <div className='container mx-auto'>
+          <h2 className='mb-16 text-xl uppercase text-center'>Заказ грузоперевозок онлайн</h2>
+          <div className='xz:flex-row sd:flex sd:justify-between'>
+            <div className='xz:mb-8 sd:mb-0 sd:w-1/2 xz:w-full'>
+              <FormOrder ur />
+            </div>
+            <div>
+              <Image src='/mainPage/avto-2.webp' alt='Микраавтобус грузоперевозки' width={500} height={400} />
+            </div>
           </div>
-          <div>
-            <Image src='/mainPage/avto-2.webp' alt='Микраавтобус грузоперевозки' width={600} height={500} />
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section className='mt-16 mb-12'>
-          <h3 className='uppercase font-bold text-xl'>
+      <section className='w-full relative bg-white py-10'>
+        <div className='container mx-auto'>
+          <h3 className='uppercase font-bold xz:text-xl xy:text-2xl sd:text-3xl'>
             Тариф на грузоперевозки
           </h3>
           <div className='mt-8'>
-            <DescriptionsComp data={dataPrices.minsk} />
+            <DescriptionsComp data={dataPrices.minsk} main />
           </div>
-        </section>
+        </div>
+      </section>
 
-        <div className="my-7 text-center">
-          <p className="mb-4 font-semibold">
-            Заказать грузоперевозку по РБ можно по телефону:
-          </p>
+      <div className="w-full text-center relative bg-white py-10">
+        <div className='container mx-auto'>
+          <h3 className="mb-6 font-semibold">
+            Заказать грузоперевозку в Минске можно по телефону:
+          </h3>
           <a href="tel:80447009000" className="text-3xl font-bold">
             8 044 700-90-00
           </a>
         </div>
+      </div>
 
-        <section className='mt-24'>
+      <section className='w-full relative bg-white py-24'>
+        <div className='container mx-auto'>
           <h3 className='text-xl mb-7 font-semibold'>
             Перевозка за 3 простых шага
           </h3>
           <StepComp />
-        </section>
+        </div>
+      </section>
 
-        <section className='mt-24'>
+      <section className='w-full relative bg-white py-10'>
+        <div className='container mx-auto'>
           <h4 className='text-xl font-semibold mb-7'>
             Часто задаваемые вопросы по грузоперевозке
           </h4>
           <CollapseComp />
-        </section>
+        </div>
+      </section>
 
-        <section className='mt-16'>
+      <section className='w-full relative bg-white py-10'>
+        <div className='container mx-auto'>
           <article className=''>
             <h5 className='font-bold text-xl uppercase'>
               8 советов как сэкономить на грузоперевозке в Минске
@@ -175,9 +202,8 @@ export default function Home() {
               Не упустите возможность сэкономить на грузоперевозках и получить надежные услуги уже сегодня! Закажите грузоперевозку в Минске или по Беларуси прямо сейчас и убедитесь в выгоде сотрудничества с нами. Нажмите кнопку "Заказать" или свяжитесь с нами по указанным контактам, и наши профессионалы будут готовы помочь вам с вашими грузоперевозками. Не упустите шанс сэкономить и получить качественные услуги сегодня!
             </p>
           </article>
-        </section>
-
-      </div>
+        </div>
+      </section>
     </main>
   )
 }

@@ -3,7 +3,7 @@ import ModalComp from "@/components/modal/ModalComp";
 import { Button } from "antd"
 import { useState } from "react";
 
-const BtnOrder = ({title}) => {
+const BtnOrder = ({title, ur}) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const showModal = () => {
@@ -15,7 +15,7 @@ const BtnOrder = ({title}) => {
 				Заказать
 			</Button>
 
-			<ModalComp isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} title={title} />
+			<ModalComp isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} title={title} ur={ur} />
 		</div>
 	)
 }

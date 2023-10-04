@@ -37,11 +37,11 @@ const page = () => {
 						<h2 className="font-bold text-xl mb-6">
 							Тариф на Грузовое такси в Минске
 						</h2>
-						<DescriptionsComp data={dataPrices.taxi} />
+						<DescriptionsComp data={dataPrices.taxi} title='Заказать грузовое такси в Минске' />
 
-						<div className="mt-6 flex justify-end">
+						{/* <div className="mt-6 flex justify-end">
 							<BtnOrder title={`Заказать Грузовое такси`} />
-						</div>
+						</div> */}
 
 						<p className="mt-8 font-light text-justify pl-2">
 							Наше грузовое такси в Минске предлагает выгодные тарифы, которые помогут сэкономить ваши средства при перевозке грузов. Наши опытные водители гарантируют безопасность и надежность доставки, а также обеспечивают быструю подачу машины, чтобы удовлетворить ваши потребности в перевозке грузов в самые кратчайшие сроки

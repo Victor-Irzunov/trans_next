@@ -37,7 +37,7 @@ const page = () => {
 						<h2 className="font-bold text-xl mb-6">
 							Тариф на перевозку мебели в Минске
 						</h2>
-						<DescriptionsComp data={dataPrices.mebel} />
+						<DescriptionsComp data={dataPrices.mebel} title="Заказать перевозку мебели в Минске" />
 
 						<div className="mt-6 flex justify-end">
 							<BtnOrder title={`Заказать перевозку мебели`} />

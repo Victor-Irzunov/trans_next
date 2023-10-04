@@ -4,7 +4,7 @@ import DescriptionsComp from "@/components/descriptionsComp/DescriptionsComp"
 import Image from "next/image"
 
 export const metadata = {
-	title: 'Квартирные переезды в Минске | Транспортная компания Trans-gruz.by',
+	title: 'Квартирные переезды в Минске | Транспортная компания Trans-gruz',
 	description: 'Профессиональные квартирные переезды в Минске от компании Trans-gruz.by. Недорогая и аккуратная доставка ваших вещей. Экономьте время и средства при переезде с нами. Закажите квартирный переезд с опытными грузчиками и водителями.',
 };
 
@@ -37,11 +37,7 @@ const page = () => {
 						<h2 className="font-bold text-xl mb-6">
 							Тариф на квартирный переезд в Минске
 						</h2>
-						<DescriptionsComp data={dataPrices.mebel} />
-
-						<div className="mt-6 flex justify-end">
-							<BtnOrder title={`Заказать перевозку мебели`} />
-						</div>
+						<DescriptionsComp data={dataPrices.mebel} title="Заказать квартирный переезд" kvartira />
 
 						<p className="mt-8 font-light text-justify pl-2">
 							Наша компания, специализирующаяся на квартирных переездах в Минске, готова предложить вам выгодные тарифы и высококачественные услуги, которые помогут вам сэкономить и обеспечить надежную доставку ваших ценных грузов. Наши опытные водители, сосредоточенные на безопасности и аккуратности, обеспечивают точную и оперативную подачу машины, что делает процесс переезда более комфортным и безопасным.

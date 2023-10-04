@@ -6,7 +6,7 @@ import BtnOrder from "../btn/btnOrder/BtnOrder";
 
 const CardUslugiComp = () => {
 	return (
-		<div className="mt-6 xz:flex-row sd:flex sd:flex-wrap sd:justify-between sd:items-center">
+		<div className="mt-6 xz:flex-row sd:flex sd:flex-wrap sd:justify-around sd:items-center">
 			{
 				dataUslugi.map(el => {
 					return (
@@ -14,16 +14,19 @@ const CardUslugiComp = () => {
 						bg-white rounded-md 
 						overflow-hidden sd:w-[30%] sd:mx-3 xz:w-full xz:mx-0
 						shadow-lg border" key={el.id}>
-							<div className="h-[250px]">
-								<Image src={el.img} alt={el.alt} className="object-cover w-full h-full mx-auto"
+							<div className="h-[250px] overflow-hidden">
+								{/* <Image src={el.img} alt={el.alt} className="object-cover w-full h-full mx-auto"
 									style={{ width: 'auto', height: 'auto' }}
+									width={600} height={500} /> */}
+								<Image src={el.img} alt={el.alt} className="object-cover w-full h-full mx-auto"
+									style={{ width: 'auto', height: '100%' }}
 									width={600} height={500} />
 							</div>
 
 							<div className="mt-3">
-								<h2 className="text-xl font-bold mb-3">
+								<h3 className="text-xl font-bold mb-3">
 									{el.title}
-								</h2>
+								</h3>
 								<p className="font-light mb-4 text-sm">
 									{el.info}
 								</p>

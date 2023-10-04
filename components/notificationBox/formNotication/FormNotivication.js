@@ -1,4 +1,4 @@
-"use client"
+
 import {
 	Form,
 	Input,
@@ -7,7 +7,7 @@ import {
 } from 'antd'
 import { sendOrderTelegram } from '@/http/telegramAPI'
 
-const FormNotification = () => {
+const FormNotification = ({closeNotification}) => {
 	const [form] = Form.useForm()
 	const onFinish = (values) => {
 		const data = { phone: values.tel, }
@@ -22,6 +22,7 @@ const FormNotification = () => {
 			if (data.ok) {
 				message.success('Сообщение принято, как только освободимся сразу перезвоним.')
 				form.resetFields()
+				closeNotification()
 			}
 		})
 	}

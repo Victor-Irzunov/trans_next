@@ -2,19 +2,29 @@ import { UserOutlined } from '@ant-design/icons'
 import { Avatar, Rate } from 'antd'
 import FormOtzyvy from '@/components/form/formOtzyvy/FormOtzyvy'
 
+
+export const metadata = {
+	title: 'Отзывы транспортной компании по грузоперевозкам в Минске',
+	description: 'Читайте отзывы наших клиентов о качестве наших услуг по грузоперевозкам и переездам в Минске и Беларуси. Узнайте, что говорят о нас наши довольные клиенты.',
+};
+
 const page = () => {
 	return (
 		<main className="py-28 overflow-x-hidden">
 			<div className="container mx-auto">
 				<section className="">
 
-					<div className="mb-32 sd:text-center xz:text-left">
+					<div className="sd:text-center xz:text-left">
 						<h1 className='xz:text-4xl sd:text-6xl uppercase tracking-wider'>
 							Что клиенты говоря о нас
 						</h1>
+						<p className='mt-16 text-center'>
+							Наши отзывы - это не просто слова, это истории успешных перевозок, дружелюбное обслуживание и надежное партнерство. Мы приглашаем вас погрузиться в мир наших клиентов и узнать, как мы делаем грузоперевозки в Минске еще более комфортными и надежными. Ваше довольство - наша главная цель, и отзывы наших клиентов - лучшее подтверждение нашей профессиональной работы.
+						</p>
 					</div>
 
-					<div className=''>
+
+					<div className='mt-20'>
 						<div className='border-b pb-4'>
 							<div className='flex'>
 								<div className=''>
@@ -189,7 +199,7 @@ const page = () => {
 								</div>
 								<div className='pl-8'>
 									<p className='text-xs text-gray-500 inline'>
-									Спасибо за ваш отзыв! Мы всегда готовы предоставить грузовое такси для перевозки строительных материалов с максимальным комфортом и оперативностью.
+										Спасибо за ваш отзыв! Мы всегда готовы предоставить грузовое такси для перевозки строительных материалов с максимальным комфортом и оперативностью.
 									</p>
 								</div>
 							</div>

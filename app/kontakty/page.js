@@ -7,11 +7,15 @@ import { useScreens } from '@/Constants/constants'
 import Image from 'next/image'
 import CollapseContactComp from '@/components/collapseContactComp/CollapseContactComp'
 
+// export const metadata = {
+// 	title: 'Контакты транспортной компании Trans-gruz.by',
+// 	description: 'Наши контактные данные и способы связи с транспортной компанией. Свяжитесь с нами для заказа грузоперевозки и получения дополнительной информации о наших услугах.',
+//  };
+ 
+
 const page = () => {
 	const screens = useScreens()
 	const DivBox = (props) => <div className={`height-${props.value}`} style={{ paddingTop: '1em' }}>{props.children}</div>
-
-
 	return (
 		<main className="py-28">
 			<div className="container mx-auto">
@@ -52,7 +56,6 @@ const page = () => {
 										</DivBox>
 									</Col>
 								</Row>
-
 
 							</Col>
 						</Row>

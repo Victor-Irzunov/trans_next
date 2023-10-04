@@ -1,4 +1,11 @@
 import CardUslugiComp from "@/components/uslugiCard/CardUslugiComp"
+import Image from "next/image";
+
+
+export const metadata = {
+	title: 'Услуги грузоперевозок в Минске | Транспортная компания Trans-gruz',
+	description: 'Предоставляем широкий спектр услуг по грузоперевозкам в Минске и по всей Беларуси. Надежная доставка, оперативное обслуживание и выгодные тарифы. Закажите перевозку сейчас!',
+};
 
 
 const page = () => {
@@ -22,6 +29,41 @@ const page = () => {
 							Услуги грузоперевозок
 						</h2>
 						<CardUslugiComp />
+					</div>
+
+					<div className="mt-20 sd:flex xz:flex-row sd:justify-around sd:items-center">
+						<div className="flex flex-col justify-center items-center">
+							<div className="">
+								<Image src='/packaging.svg' width={90} height={90} alt="Аккуратность" />
+							</div>
+							<div className="mt-6">
+								<p className="uppercase text-sm text-center">
+									Бережное обращение c <br /> имуществом заказчика
+								</p>
+							</div>
+						</div>
+						<div className="flex flex-col justify-center items-center">
+							<div className="">
+								<Image src='/trans.svg' width={100} height={100} alt="Аккуратность" />
+							</div>
+							<div className="mt-4">
+								<p className="uppercase text-sm text-center">
+									Профессиональные водители <br /> опытные грузчики
+								</p>
+							</div>
+						</div>
+						<div className="flex flex-col justify-center items-center">
+							<div className="">
+								<Image src='/product.svg' width={100} height={100} alt="Аккуратность" />
+							</div>
+							<div className="mt-4">
+								<p className="uppercase text-sm text-center">
+									Разборка, Сборка и <br />
+									 Упаковка мебели<br />
+					
+								</p>
+							</div>
+						</div>
 					</div>
 
 

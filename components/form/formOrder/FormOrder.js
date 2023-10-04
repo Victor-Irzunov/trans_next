@@ -20,7 +20,7 @@ const { RangePicker } = DatePicker
 const { TextArea } = Input
 
 
-const FormOrder = ({handleCancel}) => {
+const FormOrder = ({ handleCancel, ur }) => {
 	const screens = useScreens()
 	const [form] = Form.useForm()
 	const [tel, setTel] = useState('')
@@ -39,16 +39,12 @@ const FormOrder = ({handleCancel}) => {
 			gruz: values.gruz ? 'надо' : '-',
 			ur_lico: values.ur_lico ? 'да' : '-'
 		}
-
-
 		let messageForm = `<b>Заказ с сайта trans-gruz.by</b>\n`
 		messageForm += `<b> </b>\n`
-		if (screens.xs) messageForm += `<b>Дата: </b> ${dataForm.dateMobil} \n`
-		if (!screens.xs) messageForm += `<b>Дата: </b> ${dataForm.date.from} — ${dataForm.date.before}\n`
-		messageForm += `<b>Время: </b> ${dataForm.time}\n`
-		messageForm += `<b>Вес: </b> ${!dataForm.mass ? '-' : dataForm.mass}\n`
-		messageForm += `<b>Грузчики: </b> ${dataForm.gruz}\n`
-		messageForm += `<b>Юр.лицо: </b> ${!dataForm.ur_lico}\n`
+		messageForm += `<b>Дата: </b> ${dataForm.dateMobil || '-'} \n`
+		messageForm += `<b>Время: </b> ${dataForm.time || '-'}\n`
+		messageForm += `<b>Грузчики: </b> ${dataForm.gruz || '-'}\n`
+		messageForm += `<b>Юр.лицо: </b> ${dataForm.ur_lico || '-'}\n`
 		messageForm += `<b>Сообщение: </b> <i>«${!dataForm.message ? '-' : dataForm.message}»</i>\n`
 		messageForm += `<b> </b>\n`
 		messageForm += `<b>Отправитель: </b> ${!dataForm.name ? '-' : dataForm.name}\n`
@@ -58,13 +54,14 @@ const FormOrder = ({handleCancel}) => {
 
 		sendOrderTelegram(messageForm)
 			.then(res => {
-			console.log("🚀 🚀 🚀  _ file: FormOrder.js:61 _ onFinish _ res:", res)
-			if (res.ok) {
-				message.success('Заказ принят')
-				form.resetFields()
-				handleCancel()
-			}
-		})
+				console.log("🚀 🚀 🚀  _ file: FormOrder.js:61 _ onFinish _ res:", res)
+				if (res.ok) {
+					message.success('Заказ принят')
+					form.resetFields()
+					if (handleCancel) handleCancel()
+
+				}
+			})
 	}
 	const onFinishFailed = (errorInfo) => {
 		message.error('Ошибка');
@@ -93,10 +90,10 @@ const FormOrder = ({handleCancel}) => {
 		<Form
 			name="basic"
 			labelCol={{
-				span: 8,
+				span: 24,
 			}}
 			wrapperCol={{
-				span: 16,
+				span: 24,
 			}}
 			onFinish={onFinish}
 			onFinishFailed={onFinishFailed}
@@ -132,29 +129,17 @@ const FormOrder = ({handleCancel}) => {
 				/>
 			</Form.Item>
 
-			{
-				screens.xs ?
-					<Form.Item
-						label="Выберите число"
-						name="dateMobil"
-					>
-						<DatePicker format={dateFormat} style={{
-							width: '100%',
-						}} />
-					</Form.Item>
-					:
-					<Form.Item
-						label="Выберите число"
-						name="date"
-					>
-						<RangePicker
-							format={dateFormat}
-							style={{
-								width: '100%',
-							}}
-						/>
-					</Form.Item>
-			}
+
+			<Form.Item
+				label="Выберите число"
+				name="dateMobil"
+			>
+				<DatePicker format={dateFormat} style={{
+					width: '100%',
+				}} />
+			</Form.Item>
+
+
 
 
 
@@ -188,8 +173,8 @@ const FormOrder = ({handleCancel}) => {
 				name="gruz"
 				valuePropName="checked"
 				wrapperCol={{
-					offset: 8,
-					span: 16,
+					offset: 16,
+					span: 8,
 				}}
 			>
 				<Checkbox>
@@ -197,23 +182,28 @@ const FormOrder = ({handleCancel}) => {
 				</Checkbox>
 			</Form.Item>
 
-			<Form.Item
-				name="ur_lico"
-				valuePropName="checked"
-				wrapperCol={{
-					offset: 8,
-					span: 16,
-				}}
-			>
-				<Checkbox>
-					Юр.лицо
-				</Checkbox>
-			</Form.Item>
+			{
+				ur ? <Form.Item
+					name="ur_lico"
+					valuePropName="checked"
+					wrapperCol={{
+						offset: 16,
+						span: 8,
+					}}
+				>
+					<Checkbox>
+						Юр.лицо
+					</Checkbox>
+				</Form.Item>
+					:
+					null
+			}
+
 
 			<Form.Item
 				wrapperCol={{
-					offset: 8,
-					span: 16,
+					offset: 16,
+					span: 8,
 				}}
 			>
 				<Button htmlType="submit">
